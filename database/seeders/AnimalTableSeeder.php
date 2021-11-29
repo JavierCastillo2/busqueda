@@ -22,7 +22,7 @@ class AnimalTableSeeder extends Seeder
         ]);
         $user = Animal::create([
             'name'=>'Perro',
-            'type'=>'Canino',
+            'type'=>'Canido',
             'description'=>'Blanco con manchas cafes',
             'image'=>'perro.png',
         ]);

@@ -9,21 +9,23 @@
 							<h4><i class="fab fa-laravel text-info"></i>
 							Animales </h4>
 						</div>
-						<div wire:poll.60s>
-							<code><h5>{{ now()->format('H:i:s') }} UTC</h5></code>
+						<div wire:poll.1s >
+							<code><h5>{{ now()->format('s') }} S</h5></code>
 						</div>
 						@if (session()->has('message'))
 						<div wire:poll.4s class="btn btn-sm btn-success" style="margin-top:0px; margin-bottom:0px;"> {{ session('message') }} </div>
 						@endif
 						<div>
-							<input wire:model='keyWord' type="text" class="form-control" name="search" id="search" placeholder="Buscar Animal">
+						</div>
 					</div>
-				</div>
 
-				<div class="card-body">
+					<div class="card-body">
 						@include('livewire.animals.create')
 						@include('livewire.animals.update')
-				<div class="table-responsive">
+					<div class="table-responsive">
+					</br>
+					<input wire:model='keyWord' type="text" class="form-control" name="search" id="search" placeholder="Buscar Animal">
+					</br>
 					<table class="table table-bordered table-sm">
 						<thead class="thead">
 							<tr>
